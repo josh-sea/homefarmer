@@ -7,8 +7,8 @@ import Home from './containers/Home'
 import Community from './containers/Community'
 import Code from './containers/Code'
 import Data from './containers/Data'
-// const BASEURL = 'https://homefarmer-back.herokuapp.com/'
-const BASEURL = 'http://localhost:9000/'
+const BASEURL = 'https://homefarmer-back.herokuapp.com/'
+// const BASEURL = 'http://localhost:9000/'
 
 class App extends Component {
 
