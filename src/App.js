@@ -1,28 +1,58 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { connect } from 'react-redux'
+import Navigation from './components/Navigation'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import Home from './containers/Home'
+import Community from './containers/Community'
+import Code from './containers/Code'
 
 class App extends Component {
+
+
   render() {
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+        <Navigation />
+        <Route
+          exact path='/'
+          render={()=>{
+            return <Home />
+          }}
+        />
+        <Route
+          exact path='/community'
+          render={()=>{
+            return <Community />
+          }}
+        />
+        <Route
+          exact path='/code'
+          render={()=>{
+            return <Code />
+          }}
+        />
+      </Router>
     );
   }
 }
 
-export default App;
+
+
+//###############################################################
+const mapStateToProps = (state) => {
+  return {
+    life: state.meaning,
+  }
+}//end of state to props
+//###############################################################
+
+//###############################################################
+//dispatch as props from redux store
+const mapDispatchToProps = {
+  testing: ()=> ({type: 'TEST', hey: 'hi from reducer'})
+}//end of dispatch to props
+//###############################################################
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
