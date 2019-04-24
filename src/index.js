@@ -13,6 +13,8 @@ const reducer = (state = { activeItem: 'Home' }, action) => {
   switch(action.type) {
     case 'NAV_CLICK':
       return {...state, activeItem: action.newNavItem}
+    case 'PLANT_DATA':
+      return {...state, plantData: action.plants}
     default:
       return state
   }
