@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Code = ({}) => (
+const Code = () => (
   <div>
     hi from code
   </div>

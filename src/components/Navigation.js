@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { Menu, Header } from 'semantic-ui-react'
-import { Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Navigation = ({handleNavCLick, activeItem}) => (
   <Menu style={{margin:'0', borderRadius: '0'}} inverted>
@@ -11,7 +11,7 @@ const Navigation = ({handleNavCLick, activeItem}) => (
       active={activeItem === 'Home'}
       onClick={handleNavCLick}
      >
-     <Header as='h3' inverted>Home</Header>
+      <Header as='h3' inverted>Home</Header>
     </Menu.Item>
    </Link>
    <Link to='/community'>
@@ -20,7 +20,7 @@ const Navigation = ({handleNavCLick, activeItem}) => (
       active={activeItem === 'Community'}
       onClick={handleNavCLick}
      >
-     <Header as='h3' inverted>Community</Header>
+      <Header as='h3' inverted>Community</Header>
      </Menu.Item>
     </Link>
     <Link to='/data'>
@@ -29,7 +29,7 @@ const Navigation = ({handleNavCLick, activeItem}) => (
        active={activeItem === 'Data'}
        onClick={handleNavCLick}
       >
-      <Header as='h3' inverted>Data</Header>
+        <Header as='h3' inverted>Data</Header>
      </Menu.Item>
     </Link>
     <Link to='/Code'>
@@ -38,7 +38,7 @@ const Navigation = ({handleNavCLick, activeItem}) => (
       active={activeItem === 'Code'}
       onClick={handleNavCLick}
      >
-     <Header as='h3' inverted>Code</Header>
+      <Header as='h3' inverted>Code</Header>
      </Menu.Item>
     </Link>
 

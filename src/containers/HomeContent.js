@@ -1,7 +1,7 @@
 import React from 'react';
-import { Container, Header, Segment } from 'semantic-ui-react'
+import { Container, Header } from 'semantic-ui-react'
 
-const HomeContent = ({}) => (
+const HomeContent = () => (
   <Container style={{display: 'flex'}}>
     <Container style={{padding: '5%'}}>
       <Header as='h4'>Leading the open source community to a sustainable agricultural future</Header>

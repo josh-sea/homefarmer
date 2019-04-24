@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Community = ({}) => (
+const Community = () => (
   <div>
     hi from community
   </div>
