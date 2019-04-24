@@ -9,10 +9,15 @@ import { Provider } from 'react-redux';
 
 
 
-const reducer = (state = { activeItem: 'Home' }, action) => {
+const reducer = (state = {
+  activeItem: 'Home',
+  plantData: []
+}, action) => {
   switch(action.type) {
     case 'NAV_CLICK':
       return {...state, activeItem: action.newNavItem}
+    case 'PLANT_DATA':
+      return {...state, plantData: action.plants}
     default:
       return state
   }
