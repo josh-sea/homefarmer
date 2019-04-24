@@ -23,6 +23,15 @@ const Navigation = ({handleNavCLick, activeItem}) => (
      <Header as='h3' inverted>Community</Header>
      </Menu.Item>
     </Link>
+    <Link to='/data'>
+      <Menu.Item
+       id='Data'
+       active={activeItem === 'Data'}
+       onClick={handleNavCLick}
+      >
+      <Header as='h3' inverted>Data</Header>
+     </Menu.Item>
+    </Link>
     <Link to='/Code'>
      <Menu.Item
       id='Code'
@@ -32,6 +41,7 @@ const Navigation = ({handleNavCLick, activeItem}) => (
      <Header as='h3' inverted>Code</Header>
      </Menu.Item>
     </Link>
+
 
     <Menu.Menu position='right'>
       <Link to='/Login'>
@@ -44,6 +54,7 @@ const Navigation = ({handleNavCLick, activeItem}) => (
           <Header as='h3' inverted>Login</Header>
          </Menu.Item>
        </Link>
+
      </Menu.Menu>
   </Menu>
 );

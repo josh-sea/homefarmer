@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Home from './containers/Home'
 import Community from './containers/Community'
 import Code from './containers/Code'
+import Data from './containers/Data'
 
 class App extends Component {
 
@@ -31,6 +32,12 @@ class App extends Component {
           exact path='/code'
           render={()=>{
             return <Code />
+          }}
+        />
+        <Route
+          exact path='/data'
+          render={()=>{
+            return <Data />
           }}
         />
       </Router>
