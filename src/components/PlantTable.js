@@ -2,6 +2,7 @@ import React from 'react';
 import { Header, Table } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 
+
 const filterPlants = (searchValue, plantData) => {
      return plantData.filter(plant=>{
       const reg = new RegExp(searchValue,'gi')
@@ -20,7 +21,7 @@ const  PlantTable = ({searchValue, plantData}) => (
       </Table.Header>
       {
 
-        filterPlants(searchValue,plantData).map(plant=>{
+       filterPlants(searchValue,plantData).map(plant=>{
         return <Table.Body>
           <Table.Row>
             <Table.Cell>
