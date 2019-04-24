@@ -2,7 +2,14 @@ import React from 'react';
 import { Header, Table } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 
-const  PlantTable = ({plantData}) => (
+
+const filterPlants = (searchValue, plantData) => {
+     return plantData.filter(plant=>{
+      const reg = new RegExp(searchValue,'gi')
+      return reg.test(plant.name)
+    })
+  }
+const  PlantTable = ({searchValue, plantData}) => (
   <Table celled padded>
       <Table.Header>
         <Table.Row style={{textAlign: 'center'}}>
@@ -12,9 +19,9 @@ const  PlantTable = ({plantData}) => (
           <Table.HeaderCell singleLine>Plant Notes</Table.HeaderCell>
         </Table.Row>
       </Table.Header>
-
       {
-        plantData.map(plant=>{
+
+       filterPlants(searchValue,plantData).map(plant=>{
         return <Table.Body>
           <Table.Row>
             <Table.Cell>
@@ -41,6 +48,7 @@ const  PlantTable = ({plantData}) => (
   const mapStateToProps = (state) => {
     return {
       plantData: state.plantData,
+      searchValue: state.searchValue
     }
   }//end of state to props
   //###############################################################
