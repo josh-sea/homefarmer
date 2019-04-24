@@ -4,7 +4,7 @@ import { Menu, Header } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 
 const Navigation = ({handleNavCLick, activeItem}) => (
-  <Menu style={{margin:'0', borderRadius: '0'}} inverted>
+  <Menu stackable style={{margin:'0', borderRadius: '0'}} inverted>
    <Link to='/'>
      <Menu.Item
       id='Home'
